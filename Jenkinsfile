@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git branch: 'master',
-                url: 'git@github.com:DAravindReddy/Devops.git'
-            }
-        }
-
         stage('Build C Program') {
             steps {
                 sh 'gcc main.c -o app'
